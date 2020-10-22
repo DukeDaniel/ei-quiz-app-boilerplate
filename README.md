@@ -1,2 +1,3 @@
-# ei-quiz-app-boilerplate
-copy of quiz app
+### Boilerplate app structure for Quiz App project
+
+Team: Madison Slansky, Daniel Murrell, and Johnathan Fludd
