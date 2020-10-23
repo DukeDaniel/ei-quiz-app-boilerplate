@@ -118,7 +118,7 @@ function generateStartPage() {
 
 //this function renders the start page html from above
 function renderStartPage() { 
-  $('#container').html(generateStartPage());
+  $('main').html(generateStartPage());
 }
 
 //this function generates our questions calling upon the question array parameters above
@@ -159,7 +159,7 @@ function renderQuestionPage(){
   console.log(store.questionNumber);
   let questionHTML = generateQuestionPage();
   // insert that HTML into the DOM
-  $('#container').html(questionHTML);
+  $('main').html(questionHTML);
 }
 
 
@@ -177,7 +177,7 @@ return failedAnswer;
 //after you render the feedback you also need to display a button that advances user on to next question
 function renderFeedback(){
 let feedback= generateFeedback();
-$('#failed').html(feedback);
+$('main').html(feedback);
 $('button[type=submit]').remove();
 handleNextPage();
 }
@@ -201,7 +201,7 @@ function generateEndPage(){
 function renderEndPage(){
   $('.failed').remove();
   let endPage = generateEndPage();
-  $('#container').html(endPage);
+  $('main').html(endPage);
   handleEndPage();
 }
 
@@ -220,15 +220,25 @@ function handleStartQuiz() {
 function handleAnswerSubmit() {
   //here we put the score counter
   //let scoreCount = 0
-  $('#container').on("submit", function(){
-    let selectedAnswer = document.querySelector('input[name=answer]:checked').value;
-    console.log(selectedAnswer, store.questionNumber);
-    if (store.questions[store.questionNumber].correctAnswer === selectedAnswer){
-      store.score ++;
-    }
+  $('main').on("submit", function(){
+    
+    debugger
+   
   })
   $("main").on("submit", "form", function(evt) {
       evt.preventDefault();
+      let selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+    
+      //let selectedAnswer = $(`input[type='radio]:checked`).val();
+      //console.log(selectedAnswer)
+      
+      let sudoCorrectAnswer = store.questions[store.questionNumber].correctAnswer
+      console.log(selectedAnswer, store.questionNumber);
+      //if (store.questions[store.questionNumber].correctAnswer === selectedAnswer){
+        if (sudoCorrectAnswer === selectedAnswer){
+        store.score ++;
+      }
+
       console.log(store.questionNumber);
       if((store.questionNumber + 1) >= store.questions.length){
         store.questionNumber++;
@@ -273,7 +283,6 @@ function handleEndPage(){
 //then it will handle our functions which add our event listeners (also modifying the DOM)
 //
 function main() {
-  console.log("hi");
   renderStartPage();
   handleStartQuiz();
   handleAnswerSubmit();
