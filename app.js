@@ -220,11 +220,7 @@ function handleStartQuiz() {
 function handleAnswerSubmit() {
   //here we put the score counter
   //let scoreCount = 0
-  $('main').on("submit", function(){
-    
-    debugger
-   
-  })
+  $('main').on("submit", function(){ })
   $("main").on("submit", "form", function(evt) {
       evt.preventDefault();
       let selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
