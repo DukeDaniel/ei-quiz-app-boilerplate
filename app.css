@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: 20px;
 }
 
 .fruitPic{
@@ -28,6 +29,12 @@ img{
 h1{
   text-align: center;
   font-family: 'Sen', sans-serif;
+}
+
+h4{
+  text-align: center;
+  font-family: 'Sen', sans-serif;
+  font-size: xx-large;
 }
  
 /* start button flex box*/

@@ -188,11 +188,11 @@ handleNextPage();
 //it also needs to display the final count of correct answers
 function generateEndPage(){
   let endPage = `<div class="endPage">
-  <h1>Great Job!</h1>
+  <h4>Great Job!
   <p>Score:${store.score}</p>
   <button class="play-again-button">
     <span class="button-label">Play Again!</span>
-  </button>
+  </button></h4>
   </div>`
   return endPage;
 }
