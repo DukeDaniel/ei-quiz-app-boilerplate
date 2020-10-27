@@ -130,9 +130,9 @@ function generateQuestionPage() {
   questionCount ++;
   let questionPage = `
 <div class="card">
-<p>Score:${store.score}</p>
+<h4><p>Score:${store.score}</p>
 <p>Question:${questionCount}/${store.questions.length}</p>
-  <h2>${question.question}</h2>
+  ${question.question}
  <form>
       <label> ${question.answers[0]}</label>
       <input type="radio" name="answer" value="${question.answers[0]}">
@@ -148,6 +148,7 @@ function generateQuestionPage() {
       <br>
       <button type="submit">Submit your answer</button>
   </form>
+  </h4>
 </div>`;
   return questionPage;
 }
@@ -168,8 +169,8 @@ function renderQuestionPage(){
 //if it is wrong generate feedback and render feedback sequence
 function generateFeedback(){
   let failedAnswer= `<div class="failed">
-  <p>So close! The right answer is actually ${store.questions[store.questionNumber].correctAnswer} </p>
-<br/><button class="next-question">Next question</button></div>`;
+  <h4><p>So close! The right answer is actually ${store.questions[store.questionNumber].correctAnswer} </p>
+<br/><button class="next-question">Next question</button></h4></div>`;
 return failedAnswer;
 }
 

@@ -1,3 +1,4 @@
+
 .main {
     border: 1px black solid;
     background-color: azure;
@@ -11,6 +12,7 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin: 20px;
+  padding: 0px;
 }
 
 .fruitPic{
@@ -35,8 +37,12 @@ h4{
   text-align: center;
   font-family: 'Sen', sans-serif;
   font-size: xx-large;
+  color: blueviolet;
 }
  
+button{
+  border: #70EE9C 10px solid;
+}
 /* start button flex box*/
 .start-button-center{
   display: flex;
