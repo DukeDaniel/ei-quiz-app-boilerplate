@@ -91,20 +91,22 @@ const store = {
 
 //think of this function as a GENERATE page
 //this function awaits the end user to click start, then activates the quiz
+
+/*<div class="fruitPic">
+              <img src="https://images.unsplash.com/photo-1584209742773-f7b461564449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="Image of Kiwi"></div>
+          <div class="fruitPic">
+              <img src="https://images.unsplash.com/photo-1580157508103-2a4e9fe8ed29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80" alt="Image of Pomegranate"></div>
+*/
 function generateStartPage() {
   let startPage = `
   <div class="startPage">
-  <h1>Welcome to the Frooty Fruit Quiz!</h1>
+  <h4>Welcome to the Frooty Fruit Quiz!</h4>
 
   <section class="startPageFlex">
       <div class="startPageFruit">
           <div class="fruitPic">
               <img src="https://images.unsplash.com/photo-1589606743932-747c74e7330e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="Image of Pineapple"></div>
-          <div class="fruitPic">
-              <img src="https://images.unsplash.com/photo-1584209742773-f7b461564449?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="Image of Kiwi"></div>
-          <div class="fruitPic">
-              <img src="https://images.unsplash.com/photo-1580157508103-2a4e9fe8ed29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=633&q=80" alt="Image of Pomegranate"></div>
-      </div>
+                </div>
   </section>
 
   <div class="start-button-center">
